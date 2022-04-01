@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router'
 
-const RouteSwitchingEffect = (component: React.FunctionComponent) => {
+const RouteSwitchingEffect = (Component: any) => {
+  const location = useLocation()
+  useEffect(() => {
+  }, [location])
   return (
-        <div>
-            {component}
-        </div>
+    <Component />
   )
 }
 

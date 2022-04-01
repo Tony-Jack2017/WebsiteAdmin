@@ -1,6 +1,7 @@
 import Login from '@/pages/common/Login/Login'
 import Error from '@/pages/common/Error/Error'
 import Dashboard from '@/pages/normal/Dashboard'
+import Test from '@/pages/normal/Test'
 
 interface RouteMeta {
     title: string
@@ -24,14 +25,14 @@ const routes: Array<RouteProps> = [
     }
   },
   {
-    path: '*',
+    path: '404',
     component: Error,
     meta: {
       title: '未找到网页'
     }
   },
   {
-    path: '/*',
+    path: '/',
     component: Dashboard,
     routes: [
       {
@@ -39,6 +40,13 @@ const routes: Array<RouteProps> = [
         component: Dashboard,
         meta: {
           title: '数据看板'
+        }
+      },
+      {
+        path: 'test',
+        component: Test,
+        meta: {
+          title: '测试界面'
         }
       }
     ]
