@@ -1,0 +1,15 @@
+.apis-admin-main {
+  display: flex;
+  min-width: 1225px;
+  height: 100vh;
+  min-height: 774px;
+  .apis-admin-left {
+    width: 20%;
+    min-width: 260px;
+    background: #61dafb;
+  }
+  .apis-admin-right {
+    flex: 1;
+
+  }
+}
